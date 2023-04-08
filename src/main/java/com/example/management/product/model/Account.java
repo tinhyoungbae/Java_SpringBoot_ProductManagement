@@ -1,10 +1,14 @@
 package com.example.management.product.model;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 
 @Entity
+@Table (name = "account")
 public class Account {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String accountUsername;
+    @Column(name = "password")
     private String accountPassword;
 
     public Account(String accountUsername, String accountPassword) {
@@ -13,7 +17,6 @@ public class Account {
     }
 
     public Account(){
-
     }
 
     public String getAccountUsername() {

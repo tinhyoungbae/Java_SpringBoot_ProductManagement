@@ -1,12 +1,18 @@
 package com.example.management.product.model;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 
 @Entity
+@Table (name = "item")
 public class Item {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int itemID;
+    @Column(name = "itemname")
     private String itemName;
+    @Column(name = "itemprice")
     private float itemPrice;
+    @Column(name = "itemdetail")
     private String itemDetail;
 
     public Item(){
