@@ -6,7 +6,7 @@ import com.example.management.product.service.loginService;
 
 @Controller
 public class Login {
-    @GetMapping("/login")
+    @GetMapping("/index")
     public boolean loginController(String username, String password) {
         return loginService.loginServices(username, password);
     }
